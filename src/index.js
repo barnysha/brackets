@@ -17,7 +17,7 @@ module.exports = function check(str, bracketsConfig) {
   return stack.length === 0;
 
   function isCloseBrackets(char) {
-      return [')', '}', ']', '|', '2', '4', '6'].indexOf(char) > -1;
+      return [')', '}', ']', '2', '4', '6'].indexOf(char) > -1;
   }
 
 }
