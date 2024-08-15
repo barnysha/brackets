@@ -11,7 +11,7 @@ module.exports = function check(str, bracketsConfig) {
     };
 
     if(isCloseBrackets(current)) {
-        if(bracketsConfig[current] !== stack.pop()) return false;
+        if(brackets[current] !== stack.pop()) return false;
     } else {
       stack.push(current);
     }
