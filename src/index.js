@@ -4,9 +4,14 @@ module.exports = function check(str, bracketsConfig) {
   
   for (let i=0; i<str.length; i++) {
     let current = str[i];
+    let brackets = {
+      ')':'(',
+      '}':'{',
+      ']':'['
+    };
 
     if(isCloseBrackets(current)) {
-        if(bracketsConfig[current] !== stack.pop()) return false;
+        if(brackets[current] !== stack.pop()) return false;
     } else {
       stack.push(current);
     }
