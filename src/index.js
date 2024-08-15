@@ -7,9 +7,7 @@ module.exports = function check(str, bracketsConfig) {
     let brackets = {
       ')':'(',
       '}':'{',
-      ']':'[',
-      '|':'|',
-      '1':'1'
+      ']':'['
     };
 
     if(isCloseBrackets(current)) {
@@ -23,7 +21,7 @@ module.exports = function check(str, bracketsConfig) {
   return stack.length === 0;
 
   function isCloseBrackets(char) {
-      return [')', '}', ']', '|', '1', '2', '3', '4', '5', '6', '7', '8', '9'].indexOf(char) > -1;
+      return [')', '}', ']'].indexOf(char) > -1;
   }
 
 }
