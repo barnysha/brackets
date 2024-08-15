@@ -22,7 +22,7 @@ module.exports = function check(str, bracketsConfig) {
   return stack.length === 0;
 
   function isCloseBrackets(char) {
-      return [')', '}', ']', '|'].indexOf(char) > -1;
+      return [')', '}', ']', '|', '2', '4', '6', '7', '8'].indexOf(char) > -1;
   }
 
 }
